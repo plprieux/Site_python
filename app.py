@@ -7,10 +7,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html", content="Testing")
 
-@app.route('/mul/<int:num1>/<int:num2>')
-def mul(num1, num2):
-    result = num1 * num2
-    return render_template('multiplication.html', num1=num1, num2=num2, result=result)
+@app.route('/multiplication')
+def multiplier():
+    return render_template("multiplication.html")
 
 @app.route('/hello/<name>')
 def hello(name):

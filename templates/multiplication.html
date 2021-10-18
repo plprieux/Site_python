@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block contenu %}
-<h1> Bienvenue sur la page d'accueil </h1>
+<h1> Faites une multiplication </h1>
 <!doctype html>
 	<html lang="fr">
 		<head>
@@ -9,6 +9,7 @@
 			<title>Le formulaire</title>
 		</head>
 		<body>
+		<br>
 			<form action="http://localhost:5000/resultmul" method="post">
 					<label>Chiffre 1</label> : <input type="text" name="nbr1"  required/>
 					<label>Chiffre 2</label> : <input type="text" name="nbr2" required />
