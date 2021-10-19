@@ -5,16 +5,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("index.html", content="Testing")
+    return render_template("base.html", content="Testing")
 
 @app.route('/multiplication')
 def multiplier():
     return render_template("multiplication.html")
 
-@app.route('/hello/<name>')
-def hello(name):
-    #return 'Bonjour {} !'.format(name), HTTPStatus.OK
-    return render_template('hello.html', nom=name)
+@app.route('/hello')
+def hello():
+    return render_template("index.html", content="Testing")
 
 @app.route('/resultat',methods = ['POST'])
 def resultat():
